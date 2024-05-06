@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xtasy.in - Home to the best indie products that everyone love</title>
+    <link
+      rel="icon"
+      href="https://i.postimg.cc/cLSLXYmj/xtasy-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/productpage.css" />
+    <!--? Flicktiy CSS  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css"
+    />
+    <!--? Fancy Box CSS  -->
+    <!-- Add Fancybox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <!--? Fonts -->
+    <script
+      src="https://kit.fontawesome.com/2d81199916.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--? Side Offer Slasher!  -->
+    <div class="side-slasher" id="side-slasher">
+      <span id="carousel-textt">✅ Cash on Delivery</span>
+    </div>
+    <!-- ? Scroll buy now-->
+    <h4 id="buy-scroll" class="buy-now scroll-buy">Buy Now</h4>
+    <!--? Scroll Indicator -->
+    <div class="scroll-down-gif" id="down-gif">
+      <img
+        src="https://i.postimg.cc/hG2H4W4k/scroll-down-gif-2.gif"
+        alt="scroll-down"
+      />
+    </div>
+    <!--? Apply Coupon   -->
+    <div id="coupon-div">
+      <p>
+        <strong>👇🏻 Save ₹200</strong> Use Coupon:
+        <span class="coupon-code">FIRSTORDER</span>
+      </p>
+      <a id="apply-now">Apply Now</a>
+    </div>
+    <!-- !Ordr Confirm popip -->
+    <div class="order-confirmed">
+      <div class="cncl">
+        <i class="fa-regular fa-circle-xmark" id="confirm-cancel"></i>
+      </div>
+      <img src="https://i.postimg.cc/76YpwL08/Untitled-design-1.gif" />
+      <h4>Hurray! Order Placed</h4>
+      <p>You'll get further order updates on WhatsApp.</p>
+    </div>
+    <!-- todo Buy Slider  -->
+
+    <section class="buy-product" id="buy-card">
+      <div class="place-label">
+        <i class="fa-regular fa-circle-xmark cancel" id="cancel"></i>
+        <h4 class="place-label">Place Order</h4>
+      </div>
+      <div class="order-details">
+        <form
+          id="order-form"
+          class="order-form-od"
+          method="post"
+          action=""
+          name="order-form"
+        >
+          <!--  -->
+          <!-- prod name -->
+          <input
+            type="text"
+            id="product-name"
+            name="productname"
+            value="Hamster Mouse"
+            required
+            style="display: none"
+          />
+          <!-- Prod Price  -->
+          <input
+            type="text"
+            id="product-price"
+            name="product-price"
+            value="1,399"
+            required
+            style="display: none"
+          />
+          <!--  -->
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" required />
+          </div>
+          <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required />
+          </div>
+          <div class="form-group">
+            <label for="state">State: </label>
+            <select id="state" name="state" required>
+              <optgroup label="Top States">
+                <option value="Select State">Select State</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Punjab">Punjab</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Haryana">Haryana</option>
+              </optgroup>
+              <optgroup label="Other States">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="order-placer">
+            <input
+              type="submit"
+              value="Pay on Delivery"
+              class="order-btn"
+              id="down-swipe"
+            />
+            <a class="order-btn">Pay Online</a>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!--!Main Section  -->
+    <main>
+      <!--! Header   -->
+      <header>
+        <div class="menu">
+          <img
+            src="https://i.postimg.cc/nrBCSzcW/Menu.png"
+            alt="menu icon Xtasy.in"
+          />
+        </div>
+        <div class="logo" id="sliding-text">
+          <h1 style="display: none">Xtasy.in</h1>
+          <img src="https://i.postimg.cc/05hbnrRB/Xtasy-1.gif" alt="" />
+        </div>
+        <div class="cart-lg">
+          <img
+            src="https://i.postimg.cc/9Mc8Q4sd/image-5.png"
+            alt="cart icon Xtasy.in"
+          />
+        </div>
+      </header>
+      <!--! Product Image Showcase Big -->
+      <section class="product-case">
+        <span class="carousel-tag" id="carousel-text">🔥 Selling Fast</span>
+        <div class="big-carousel">
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/760kLCjd/sdfds-3.png"
+              alt="Product 1"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/j2dHZf6J/sdfds-4.png"
+              alt="Product 2"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/vZfL3GFM/sdfds-2.png"
+              alt="Product 3"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/qRYJ5VyX/sdfds-5.png"
+              alt="Product 4"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/jdL6fs3Z/image.png"
+              alt="Product 5"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/KjJdHt6X/sdfds-7.png"
+              alt="Product 6"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/DyXgDvQm/image.png"
+              alt="Product  7"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/k4V0pVnD/image.png"
+              alt="Product 8"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/RCHJxXhV/sdfds-6.png"
+              alt="Product 9"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/Lsg6KLZf/sdfds-8.png"
+              alt="Product 10"
+            />
+          </div>
+          <!-- Add more product-image divs with additional product images -->
+        </div>
+        <!-- ! Small carousel -->
+        <div class="small-carousel">
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/760kLCjd/sdfds-3.png"
+              alt="Product 1"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/j2dHZf6J/sdfds-4.png"
+              alt="Product 2"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/vZfL3GFM/sdfds-2.png"
+              alt="Product 3"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/qRYJ5VyX/sdfds-5.png"
+              alt="Product 4"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/jdL6fs3Z/image.png"
+              alt="Product 5"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/KjJdHt6X/sdfds-7.png"
+              alt="Product 6"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/DyXgDvQm/image.png"
+              alt="Product  7"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/k4V0pVnD/image.png"
+              alt="Product 8"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/RCHJxXhV/sdfds-6.png"
+              alt="Product 9"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/Lsg6KLZf/sdfds-8.png"
+              alt="Product 10"
+            />
+          </div>
+          <!-- Add more product-image divs with small image previews -->
+        </div>
+      </section>
+      <!--! Product Section  -->
+      <section class="product-details">
+        <h2 class="prod-name">Xtasy's Hamster Mouse (PC/Mac)</h2>
+        <div class="rating">
+          <img src="https://i.postimg.cc/V6SM45BX/image-2.png" alt="Rating" />
+          <p class="review-details">
+            Rated: 4.7/5 <span class="review-nm">(124 Reviews)</span>
+          </p>
+        </div>
+        <div class="price">
+          <h4 class="original-price">₹2,999</h4>
+          <h3 class="sale-price">₹1,599</h3>
+          <span class="off-per" id="off">45% Off</span>
+        </div>
+        <div class="product-description">
+          <p id="detail-dsc" style="display: none">
+            Introducing the Xtasy's Hamster Mouse, a premium accessory that
+            blends stunning aesthetics with top-tier performance. Crafted with
+            precision, it features a sleek design with a brushed aluminum
+            finish, exuding elegance. Its ergonomic shape ensures comfort during
+            extended use. Underneath, cutting-edge technology delivers smooth
+            tracking and accuracy. Customizable buttons and adjustable DPI
+            settings enhance productivity. The Xtasy Elite Mouse is perfect for
+            users seeking style and substance, offering luxury and performance
+            in every click. Elevate your computing experience with Xtasy and
+            discover a new level of sophistication.
+          </p>
+
+          <p id="desc-summary">
+            Introducing the Xtasy's Hamster Mouse, a premium accessory that
+            blends stunning aesthetics with top-tier performance. Crafted with
+            <a class="read" id="read-more">...Read more</a>
+          </p>
+          <a class="read" id="read-less" style="display: none">...Read Less</a>
+        </div>
+        <h4 id="buy" class="buy-now">Buy Now</h4>
+        <div class="trust-icons">
+          <span
+            ><img
+              src="https://i.postimg.cc/L4xScZbM/Montserrat.png"
+              alt="Free Shipping"
+            />
+            <p>Free Shipping</p></span
+          >
+          <span
+            ><img
+              src="https://i.postimg.cc/q7TX4W6W/5.png"
+              alt="Easy Returns"
+            />
+            <p>Easy Returns</p></span
+          >
+          <span
+            ><img
+              src="https://i.postimg.cc/8zWm8Tch/7.png"
+              alt="High Quality"
+            />
+            <p>High Quality</p></span
+          >
+        </div>
+      </section>
+      <!--!Review Seciton -->
+      <section class="reviews">
+        <div class="review-header">
+          <i class="fa-solid fa-check check-sign"></i>
+          <h5>
+            Reviews <span style="font-size: 0.65rem">4.7/5 (124 Reviews)</span>
+          </h5>
+        </div>
+        <div class="review-content">
+          <div class="reviews-container">
+            <div class="review-summary">
+              <img
+                src="https://i.postimg.cc/02VKsmqz/TFC-logo-4.gif"
+                alt="Review Summary"
+              />
+            </div>
+            <div class="reviews-carousel">
+              <div class="review">
+                <div class="client-name">
+                  <p>Mayank Khatri</p>
+                  <span class="verify-tag">Verified</span>
+                </div>
+                <div class="starsgiven">
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                </div>
+                <div class="client-review">
+                  I absolutely love this hamster-shaped computer mouse! It's not
+                  only adorable but also incredibly durable.
+                </div>
+                <div class="review-images">
+                  <img
+                    src="https://m.media-amazon.com/images/I/81kJ51FlezL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                  <img
+                    src="https://m.media-amazon.com/images/I/814qaIUPOeL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                </div>
+              </div>
+              <div class="review">
+                <div class="client-name">
+                  <p>Arjun Sharma</p>
+                  <!-- <span class="verify-tag">Verified</span> -->
+                </div>
+                <div class="starsgiven">
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                </div>
+                <div class="client-review">
+                  The mouse is absolutelt very good but took some time for
+                  delivery, nothing else. Go for it.
+                </div>
+                <div class="review-images">
+                  <img
+                    src="https://s3.amazonaws.com/me.judge.review-images/pink-gaming/1648555783__huge__huge.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                </div>
+              </div>
+              <div class="review">
+                <div class="client-name">
+                  <p>Rahul Purohit</p>
+                  <span class="verify-tag">Verified</span>
+                </div>
+                <div class="starsgiven">
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                </div>
+                <div class="client-review">
+                  With its cute hamster design, this mouse is surprisingly
+                  durable and high-quality. It's not just fun to look at but
+                  also functional.
+                </div>
+                <div class="review-images">
+                  <img
+                    src="https://m.media-amazon.com/images/I/71RC2ajfwaL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                  <img
+                    src="https://m.media-amazon.com/images/I/81TGWM4+HtL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                </div>
+              </div>
+              <div class="review">
+                <div class="client-name">
+                  <p>Amit Patel</p>
+                  <span class="verify-tag">Verified</span>
+                </div>
+                <div class="starsgiven">
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                </div>
+                <div class="client-review">
+                  This hamster mouse is built to last with top-notch durability.
+                  It's a unique and reliable accessory that adds a touch of
+                  whimsy to your workspace.
+                </div>
+                <div class="review-images">
+                  <img
+                    src="https://m.media-amazon.com/images/I/712GF61y60L.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                  <img
+                    src="https://m.media-amazon.com/images/I/616E+62esJL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                </div>
+              </div>
+              <div class="review">
+                <div class="client-name">
+                  <p>Ananya Sharma</p>
+                  <span class="verify-tag">Verified</span>
+                </div>
+                <div class="starsgiven">
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star-half rating-star"></i>
+                </div>
+                <div class="client-review">Amazing Mouse Love it</div>
+                <div class="review-images">
+                  <img
+                    src="https://m.media-amazon.com/images/I/912DoY8EdHL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                  <img
+                    src="https://m.media-amazon.com/images/I/B1cmfqggM3S.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                </div>
+              </div>
+              <div class="review">
+                <div class="client-name">
+                  <p>Nikita Tanija</p>
+                </div>
+                <div class="starsgiven">
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                </div>
+                <div class="client-review">
+                  Experience precision and durability with this hamster mouse.
+                  Its high-quality materials and sturdy construction.
+                </div>
+                <div class="review-images">
+                  <img
+                    src="https://m.media-amazon.com/images/I/61cqRBusrqL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                  <img
+                    src="https://m.media-amazon.com/images/I/71VIfhh0TsL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                </div>
+              </div>
+              <div class="review">
+                <div class="client-name">
+                  <p>Ranjeet Pawar</p>
+                  <span class="verify-tag">Verified</span>
+                </div>
+                <div class="starsgiven">
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star rating-star"></i>
+                  <i class="fa-solid fa-star-half rating-star"></i>
+                </div>
+                <div class="client-review">
+                  Best purchase of my year. Great Product Xtasy
+                </div>
+                <div class="review-images">
+                  <img
+                    src="https://m.media-amazon.com/images/I/71kgn6P4MHL.jpg"
+                    alt="review image"
+                    class="review-image"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="review-analytics"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-quality">
+        <img src="https://i.postimg.cc/tTdX4VyF/7-Day-Free-1.gif" />
+      </section>
+
+      <section class="product-features">
+        <div class="features-header">
+          <i class="fa-regular fa-file-lines check-sign"></i>
+          <h5>Product Details</h5>
+        </div>
+        <div class="video-showcase">
+          <div class="video-case">
+            <iframe
+              src="https://player.vimeo.com/video/943214806?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              title="Xtasy's Hamster Mouse"
+            ></iframe>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+        </div>
+        <!--! Alternate Gif's -->
+        <div class="alternate-gifs">
+          <div class="alternate-cell">
+            <img
+              src="https://i.postimg.cc/1tbjPrGL/Your-paragraph-text-2.gif"
+              alt="product Feature 1"
+            />
+          </div>
+          <div class="alternate-cell">
+            <img
+              src="https://i.postimg.cc/vZcN7Psn/Your-paragraph-text.png"
+              alt="Product Feature 2"
+            />
+          </div>
+          <div class="alternate-cell">
+            <img
+              src="https://i.postimg.cc/0QQnxjyw/Your-paragraph-text-1.png"
+              alt="Product Feature 3"
+            />
+          </div>
+          <div class="alternate-cell">
+            <img
+              src="https://i.postimg.cc/Lsy7jrqj/Your-paragraph-text-2.png"
+              alt="Product Feature 4"
+            />
+          </div>
+          <!--?Add more cells  -->
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="review-header">
+          <i class="fa-solid fa-bag-shopping check-sign"></i>
+          <h5>Why Buy From Us?</h5>
+        </div>
+        <h1>Xtasy.in</h1>
+        <p>
+          Xtasy.in has experienced remarkable growth over the past 5 years,
+          emerging as a leader in the market with its exceptional product range
+          and dedicated customer service. What began as a passion has evolved
+          into a platform that brings joy to hundreds of customers every day.
+          Our focus has always been on delivering the best possible experience
+          to our customers, always prioritizing their satisfaction over profits.
+        </p>
+        <div class="features-container">
+          <p class="feature">📦 Easy Returns</p>
+          <p class="feature">📞 24/7 Support</p>
+          <p class="feature">⚡ Free & Fast Delivery</p>
+          <p class="feature">💎 Quality Products</p>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <p class="cprt">&copy; 2024 Xtasy.in. All rights reserved.</p>
+      </footer>
+    </main>
+    <!-- Jquery -->
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Flickity -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+    <!-- Image Magnifier -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
