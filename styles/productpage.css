@@ -79,7 +79,7 @@ img {
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 70px;
+  bottom: 10px;
   right: 45vw;
   animation: bounce 1.5s 1000;
   transform: translateX(150%);
@@ -287,6 +287,39 @@ header div {
   font-weight: 600;
   font-size: 1.2rem;
   border-radius: 0.55rem;
+}
+
+#reminder {
+  background-color: #efefef;
+  color: #4d4d4fcf;
+  font-size: 1rem;
+}
+
+.reminder-form-sec {
+  position: fixed;
+  background-color: white;
+  z-index: 99;
+  bottom: 50%;
+  right: 50%;
+  width: 75vw;
+  border-radius: 1rem;
+  transform: translate(50%, 50%);
+  padding: 2rem;
+  border: 1px solid #ebeaeb;
+  box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.03),
+    -0.5px -0.5px 4px rgba(0, 0, 0, 0.03);
+  display: none;
+}
+
+.rem-des {
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+
+.bell {
+  color: #1757ff;
+  animation: bounce 1.5s 1000;
+  margin-right: 0.7rem;
 }
 
 .trust-icons {
