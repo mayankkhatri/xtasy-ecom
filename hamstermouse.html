@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ! Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3F2TNBNNHX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3F2TNBNNHX");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Xtasy.in - Home to the best indie products that everyone love</title>
@@ -26,6 +41,43 @@
       src="https://kit.fontawesome.com/2d81199916.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1050366613457332");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1050366613457332&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <!--? Side Offer Slasher!  -->
@@ -33,7 +85,9 @@
       <span id="carousel-textt">✅ Cash on Delivery</span>
     </div>
     <!-- ? Scroll buy now-->
-    <h4 id="buy-scroll" class="buy-now scroll-buy">Buy Now</h4>
+    <h4 onclick="trackButtonClick()" id="buy-scroll" class="buy-now scroll-buy">
+      Buy Now
+    </h4>
     <!--? Scroll Indicator -->
     <div class="scroll-down-gif" id="down-gif">
       <img
@@ -58,6 +112,55 @@
       <h4>Hurray! Order Placed</h4>
       <p>You'll get further order updates on WhatsApp.</p>
     </div>
+
+    <!--todo Reminder   -->
+
+    <section class="reminder-form-sec">
+      <div class="reminder-div">
+        <form
+          id="reminder-form"
+          class="reminder-form"
+          method="post"
+          action=""
+          name="reminder-form"
+        >
+          <!-- prod name -->
+          <input
+            type="text"
+            id="product-name"
+            name="productname"
+            value="Reminder Hamster Mouse"
+            style="display: none"
+          />
+          <!-- Prod Price  -->
+          <input
+            type="text"
+            id="product-price"
+            name="product-price"
+            value="1,399"
+            style="display: none"
+          />
+          <!--  -->
+          <div class="form-group">
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required />
+          </div>
+          <input
+            type="submit"
+            value="Remind Me"
+            class="order-btn"
+            id="down-remind"
+          />
+          <p class="rem-des">
+            Don't Worry! We will never span you or share your data ever.
+          </p>
+        </form>
+      </div>
+    </section>
     <!-- todo Buy Slider  -->
 
     <section class="buy-product" id="buy-card">
@@ -80,7 +183,6 @@
             id="product-name"
             name="productname"
             value="Hamster Mouse"
-            required
             style="display: none"
           />
           <!-- Prod Price  -->
@@ -89,7 +191,6 @@
             id="product-price"
             name="product-price"
             value="1,399"
-            required
             style="display: none"
           />
           <!--  -->
@@ -167,7 +268,7 @@
               class="order-btn"
               id="down-swipe"
             />
-            <a class="order-btn">Pay Online</a>
+            <a id="online" class="order-btn">Pay Online</a>
           </div>
         </form>
       </div>
@@ -205,55 +306,50 @@
           </div>
           <div class="product-image product-image-big">
             <img
-              src="https://i.postimg.cc/j2dHZf6J/sdfds-4.png"
-              alt="Product 2"
-            />
-          </div>
-          <div class="product-image product-image-big">
-            <img
-              src="https://i.postimg.cc/vZfL3GFM/sdfds-2.png"
+              src="https://i.postimg.cc/prw3zbNJ/sdfds-2.png"
               alt="Product 3"
             />
           </div>
           <div class="product-image product-image-big">
             <img
-              src="https://i.postimg.cc/qRYJ5VyX/sdfds-5.png"
+              src="https://i.postimg.cc/NF9WKGn0/sdfds-4.png"
+              alt="Product 2"
+            />
+          </div>
+          <div class="product-image product-image-big">
+            <img
+              src="https://i.postimg.cc/TPTMt6Kk/sdfds-5.png"
               alt="Product 4"
             />
           </div>
+
           <div class="product-image product-image-big">
             <img
-              src="https://i.postimg.cc/jdL6fs3Z/image.png"
-              alt="Product 5"
-            />
-          </div>
-          <div class="product-image product-image-big">
-            <img
-              src="https://i.postimg.cc/KjJdHt6X/sdfds-7.png"
+              src="https://i.postimg.cc/05zQYYRz/sdfds-7.png"
               alt="Product 6"
             />
           </div>
           <div class="product-image product-image-big">
             <img
-              src="https://i.postimg.cc/DyXgDvQm/image.png"
+              src="https://i.postimg.cc/4xgxRjKc/image.png"
               alt="Product  7"
             />
           </div>
           <div class="product-image product-image-big">
             <img
-              src="https://i.postimg.cc/k4V0pVnD/image.png"
+              src="https://i.postimg.cc/Kc51vG2N/image-1.png"
               alt="Product 8"
             />
           </div>
           <div class="product-image product-image-big">
             <img
-              src="https://i.postimg.cc/RCHJxXhV/sdfds-6.png"
+              src="https://i.postimg.cc/j55Vr4QP/sdfds-6.png"
               alt="Product 9"
             />
           </div>
           <div class="product-image product-image-big">
             <img
-              src="https://i.postimg.cc/Lsg6KLZf/sdfds-8.png"
+              src="https://i.postimg.cc/rmYByRQb/sdfds-8.png"
               alt="Product 10"
             />
           </div>
@@ -269,55 +365,49 @@
           </div>
           <div class="product-image">
             <img
-              src="https://i.postimg.cc/j2dHZf6J/sdfds-4.png"
-              alt="Product 2"
-            />
-          </div>
-          <div class="product-image">
-            <img
               src="https://i.postimg.cc/vZfL3GFM/sdfds-2.png"
               alt="Product 3"
             />
           </div>
           <div class="product-image">
             <img
-              src="https://i.postimg.cc/qRYJ5VyX/sdfds-5.png"
+              src="https://i.postimg.cc/NF9WKGn0/sdfds-4.png"
+              alt="Product 2"
+            />
+          </div>
+          <div class="product-image">
+            <img
+              src="https://i.postimg.cc/TPTMt6Kk/sdfds-5.png"
               alt="Product 4"
             />
           </div>
           <div class="product-image">
             <img
-              src="https://i.postimg.cc/jdL6fs3Z/image.png"
-              alt="Product 5"
-            />
-          </div>
-          <div class="product-image">
-            <img
-              src="https://i.postimg.cc/KjJdHt6X/sdfds-7.png"
+              src="https://i.postimg.cc/05zQYYRz/sdfds-7.png"
               alt="Product 6"
             />
           </div>
           <div class="product-image">
             <img
-              src="https://i.postimg.cc/DyXgDvQm/image.png"
+              src="https://i.postimg.cc/4xgxRjKc/image.png"
               alt="Product  7"
             />
           </div>
           <div class="product-image">
             <img
-              src="https://i.postimg.cc/k4V0pVnD/image.png"
+              src="https://i.postimg.cc/Kc51vG2N/image-1.png"
               alt="Product 8"
             />
           </div>
           <div class="product-image">
             <img
-              src="https://i.postimg.cc/RCHJxXhV/sdfds-6.png"
+              src="https://i.postimg.cc/j55Vr4QP/sdfds-6.png"
               alt="Product 9"
             />
           </div>
           <div class="product-image">
             <img
-              src="https://i.postimg.cc/Lsg6KLZf/sdfds-8.png"
+              src="https://i.postimg.cc/rmYByRQb/sdfds-8.png"
               alt="Product 10"
             />
           </div>
@@ -383,6 +473,9 @@
             <p>High Quality</p></span
           >
         </div>
+        <h4 id="reminder" class="buy-now">
+          <i class="fa-regular fa-bell bell"> </i> Remind Me to Buy in Few Days
+        </h4>
       </section>
       <!--!Review Seciton -->
       <section class="reviews">
@@ -396,7 +489,7 @@
           <div class="reviews-container">
             <div class="review-summary">
               <img
-                src="https://i.postimg.cc/02VKsmqz/TFC-logo-4.gif"
+                src="https://i.postimg.cc/Kc795HXz/TFC-logo-4.gif"
                 alt="Review Summary"
               />
             </div>
@@ -419,14 +512,14 @@
                 </div>
                 <div class="review-images">
                   <img
-                    src="https://m.media-amazon.com/images/I/81kJ51FlezL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/81kJ51FlezL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                   <img
-                    src="https://m.media-amazon.com/images/I/814qaIUPOeL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/814qaIUPOeL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                 </div>
               </div>
@@ -447,9 +540,9 @@
                 </div>
                 <div class="review-images">
                   <img
-                    src="https://s3.amazonaws.com/me.judge.review-images/pink-gaming/1648555783__huge__huge.jpg"
+                    data-src="https://s3.amazonaws.com/me.judge.review-images/pink-gaming/1648555783__huge__huge.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                 </div>
               </div>
@@ -472,14 +565,14 @@
                 </div>
                 <div class="review-images">
                   <img
-                    src="https://m.media-amazon.com/images/I/71RC2ajfwaL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/71RC2ajfwaL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                   <img
-                    src="https://m.media-amazon.com/images/I/81TGWM4+HtL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/81TGWM4+HtL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                 </div>
               </div>
@@ -502,14 +595,14 @@
                 </div>
                 <div class="review-images">
                   <img
-                    src="https://m.media-amazon.com/images/I/712GF61y60L.jpg"
+                    data-src="https://m.media-amazon.com/images/I/712GF61y60L.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                   <img
-                    src="https://m.media-amazon.com/images/I/616E+62esJL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/616E+62esJL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                 </div>
               </div>
@@ -528,14 +621,14 @@
                 <div class="client-review">Amazing Mouse Love it</div>
                 <div class="review-images">
                   <img
-                    src="https://m.media-amazon.com/images/I/912DoY8EdHL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/912DoY8EdHL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                   <img
-                    src="https://m.media-amazon.com/images/I/B1cmfqggM3S.jpg"
+                    data-src="https://m.media-amazon.com/images/I/B1cmfqggM3S.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                 </div>
               </div>
@@ -556,14 +649,14 @@
                 </div>
                 <div class="review-images">
                   <img
-                    src="https://m.media-amazon.com/images/I/61cqRBusrqL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/61cqRBusrqL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                   <img
-                    src="https://m.media-amazon.com/images/I/71VIfhh0TsL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/71VIfhh0TsL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                 </div>
               </div>
@@ -584,14 +677,13 @@
                 </div>
                 <div class="review-images">
                   <img
-                    src="https://m.media-amazon.com/images/I/71kgn6P4MHL.jpg"
+                    data-src="https://m.media-amazon.com/images/I/71kgn6P4MHL.jpg"
                     alt="review image"
-                    class="review-image"
+                    class="review-image lazy-load"
                   />
                 </div>
               </div>
             </div>
-            <div class="review-analytics"></div>
           </div>
         </div>
       </section>
@@ -608,12 +700,15 @@
         <div class="video-showcase">
           <div class="video-case">
             <iframe
-              src="https://player.vimeo.com/video/943214806?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              width="859"
+              height="483"
+              src="https://www.youtube.com/embed/QTs24LvpdKU"
+              title="Hamster Wireless Mouse"
               frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              title="Xtasy's Hamster Mouse"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
             ></iframe>
-            <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
         <!--! Alternate Gif's -->
@@ -626,19 +721,19 @@
           </div>
           <div class="alternate-cell">
             <img
-              src="https://i.postimg.cc/vZcN7Psn/Your-paragraph-text.png"
+              src="https://i.postimg.cc/s2L5tJJQ/Your-paragraph-text.png"
               alt="Product Feature 2"
             />
           </div>
           <div class="alternate-cell">
             <img
-              src="https://i.postimg.cc/0QQnxjyw/Your-paragraph-text-1.png"
+              src="https://i.postimg.cc/050bSfJY/Your-paragraph-text-1.png"
               alt="Product Feature 3"
             />
           </div>
           <div class="alternate-cell">
             <img
-              src="https://i.postimg.cc/Lsy7jrqj/Your-paragraph-text-2.png"
+              src="https://i.postimg.cc/tCR7NxhL/Your-paragraph-text-2.png"
               alt="Product Feature 4"
             />
           </div>
