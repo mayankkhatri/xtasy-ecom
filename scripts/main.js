@@ -320,3 +320,15 @@ function trackButtonClick() {
     event_label: "Added to cart",
   });
 }
+
+// FB Pixel data 
+  function trackAddToCart() {
+    fbq('track', 'AddToCart');
+  }
+
+function trackPurchase() {
+    fbq('track', 'Purchase', {
+      value: 100, // Insert the value of the purchase here
+      currency: 'USD' // Insert the currency code here
+    });
+  }
