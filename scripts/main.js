@@ -269,3 +269,54 @@ form.addEventListener("submit", (e) => {
 
     .catch((error) => console.error("Error!", error.message));
 });
+
+// Reminder form submit
+
+// Reminder click to visible
+const reminderButton = document.getElementById("reminder");
+const reminderSection = document.querySelector(".reminder-form-sec");
+
+reminderButton.addEventListener("click", function () {
+  reminderSection.style.display = "block";
+});
+
+const remForm = document.forms["reminder-form"];
+
+remForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(remForm) })
+    .then((response) => {
+      reminderSection.style.display = "none";
+    })
+
+    .catch((error) => console.error("Error!", error.message));
+});
+
+// click submit to display none
+const downreminder = document.getElementById("down-remind");
+downreminder.addEventListener("click", function () {
+  reminderSection.style.display = "none";
+});
+
+// Lazy Loading image
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyLoadImages = document.querySelectorAll(".lazy-load");
+  lazyLoadImages.forEach(function (img) {
+    img.setAttribute("src", img.getAttribute("data-src"));
+  });
+});
+
+// miscllaneous
+const oline = document.getElementById("online");
+oline.addEventListener("click", function () {
+  alert("Only Delivery Not Available Right Now! Please Choose Pay on Delivery");
+});
+
+// Google Analytics
+
+function trackButtonClick() {
+  gtag("event", "button_click", {
+    event_category: "Button Click",
+    event_label: "Added to cart",
+  });
+}
