@@ -85,7 +85,7 @@
       <span id="carousel-textt">✅ Cash on Delivery</span>
     </div>
     <!-- ? Scroll buy now-->
-    <h4 onclick="trackButtonClick()" id="buy-scroll" class="buy-now scroll-buy">
+    <h4 onclick="trackAddToCart()" id="buy-scroll" class="buy-now scroll-buy">
       Buy Now
     </h4>
     <!--? Scroll Indicator -->
@@ -267,6 +267,7 @@
               value="Pay on Delivery"
               class="order-btn"
               id="down-swipe"
+              onclick="trackPurchase()"
             />
             <a id="online" class="order-btn">Pay Online</a>
           </div>
