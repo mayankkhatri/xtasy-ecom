@@ -276,9 +276,28 @@ header div {
   font-size: 0.72rem;
   color: #262626;
 }
+/* color Optiopns  */
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+  font-size: 1.2rem;
+}
+.color-option {
+  margin: 0 10px; /* Adjust spacing between options as needed */
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 0.3rem;
+
+  padding: 0.4rem 0.8rem;
+}
+.selected {
+  border: 1.5px solid black;
+}
 
 .buy-now {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   text-align: center;
   padding: 0.5rem 0;
   background-color: #1757ff;
@@ -288,6 +307,7 @@ header div {
   font-size: 1.2rem;
   border-radius: 0.55rem;
 }
+
 
 #reminder {
   background-color: #efefef;
