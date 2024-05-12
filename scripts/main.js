@@ -332,3 +332,16 @@ function trackPurchase() {
       currency: 'USD' // Insert the currency code here
     });
   }
+
+// Colors
+function selectColor(color) {
+  // Remove the 'selected' class from all options
+  document.querySelectorAll(".color-option").forEach((option) => {
+    option.classList.remove("selected");
+  });
+
+  // Add the 'selected' class to the clicked option
+  document.getElementById("color-" + color).classList.add("selected");
+
+  
+}
